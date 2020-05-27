@@ -36,11 +36,9 @@ function onLoad() {
 
 
 async function getAllEmployees() {
-    let response = await fetch("https://cors-anywhere.herokuapp.com/http://sandbox.bittsdevelopment.com/code1/fetchemployees.php", {
+    let response = await fetch("http://sandbox.bittsdevelopment.com/code1/fetchemployees.php", {
         method: "GET",
-        headers: {
-            'Content-Type': 'application/json'
-        }
+
     });
     let data = await response.json();
     return data;
